@@ -40,11 +40,10 @@ int main(int argc, const char * argv[]) {
         while (!arrayIsSorted(int_array, array_size)) {
             bogoSort(int_array, array_size);
             
-            if (tracker % 100000 == 0) {
-                printf("Running attempt %li\n", tracker);
-            }
-
             tracker++;
+
+            printf("\rAttempt: %li", tracker);
+            fflush(stdout);
         }
         
         printf("\n## Sorting successful at attempt %li!\n\nSorted array = ", tracker);
@@ -55,7 +54,7 @@ int main(int argc, const char * argv[]) {
         printArray(int_array, array_size);
     }
     
-    printf("\n\nOverall time taken = %i seconds\n\n", (int)(time(NULL) - start_time));
+    printf("\nOverall time taken = %i seconds\n", (int)(time(NULL) - start_time));
     
     printf("\n------ FINISHED -----");
     return 0;
