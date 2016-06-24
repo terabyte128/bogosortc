@@ -11,6 +11,6 @@ Usage: `./bogosortc [num1] [num2] ... [numN]`
 
 Depending on certain things, you might have to `chmod +x bogosortc` before you can run the program.
 
-Characters will be interpreted as 0's because whatever. 
+Non-integer strings will be interpreted as 0 due to the behavior of `atoi()`. 
 
 Happy sorting!
